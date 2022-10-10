@@ -54,11 +54,10 @@ include('includes/database.php');
             </thead>
             <tbody>
               <?php
-              //To check if a result was displayed
+              //To check if a result was gotten from the database
               if ($result -> num_rows > 0){
                 //Loop through results
-                while ($row = $result->fetch_assoc()) {
-                  //Display customer info
+                foreach ($result as $row) {
                   $output = '<tr>';
                   $output .= '<td>'.$row['first_name'].' '.$row['last_name'].'</td>';
                   $output .= '<td>'.$row['email'].'</td>';
@@ -67,7 +66,6 @@ include('includes/database.php');
 
                   //Display output
                   echo $output;
-
                 }
               }
               else{

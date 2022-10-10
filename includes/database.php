@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost";
-$database = "store2";
+$database = "store";
 $username = "root";
 $password = "";
 
-// Create connection
+// Create connection -CHALLENGE: Use try and catch to handle the databast connection
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
