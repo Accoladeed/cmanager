@@ -3,11 +3,15 @@
 //To assign the get value to a variable
 $id = $_GET['id'];
 //Query to delete customer address from customer_addresses table
-$query = "DELETE FROM customer_addresses WHERE customer = $id";
-$conn -> query($query);
+$query1 = "DELETE FROM customer_addresses WHERE customer = $id";
+$conn -> query($query1);
+
 //Guery to delete the customer from the customers table
 $query = "DELETE FROM customers WHERE id = $id";
 $conn -> query($query);
+
+
+
  ?>
 
  <!doctype html>
